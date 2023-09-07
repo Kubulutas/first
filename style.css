@@ -1,0 +1,215 @@
+/* FORMAT 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+ FORMAT */
+
+
+/* proje renklerini tanımlamak için root kullanılabilir*/
+:root{
+    --maincolor:#669CF5;
+    --background:#35424A;
+}
+
+body{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.5 ;     /*    satır boşluğu line height     */
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;  /*    conteynerın dışına taşmıyor ama o tarafı kesiyor    */
+}
+
+ul{                  /*    ul containerın içinde olduğu için kendini onun içinde sıfırlıyor, değerlendiriyor tüm komutlarını    */
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background-color: var(--background);
+    color: #f4f4f4;
+    min-height: 70px;
+    padding-top: 30px;
+    padding-top: 30px;
+    border-bottom: var(--maincolor) 3px solid;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+header ul{
+    list-style-type: none;
+}
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px;
+}
+
+header #branding{
+    float: left;       /*   öğeleri yan yana dizmek için  aynı zmanda flex yapısı ile de yan yana dizilir  */
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header.highlight, .header, .current a{
+    color: var(--maincolor);
+    font-weight: bold;
+}
+
+
+/*   section bölümüne başladık üst gövde  */
+
+#showcase{
+    background: url(img/showcase.jpg) no-repeat 0 -400px; 
+    /*   arka plan fotosunu tekrarlanmasın ve 0 -400px ile ortalansın  */
+    min-height: 400px;
+    text-align: center;
+    color:#fff
+}
+#showcase h1{
+    font-size: 55px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+#showcase p{
+    font-size: 20px;
+
+}
+
+/*   alt section bölümüne başladık alt gövde  */
+
+
+
+#newsletter{
+    background: var(--background);
+    color: #fff;
+    padding: 15px;
+}
+#newsletter h1{
+    float: left;   /*   h1 başlığındakiler sağa konumlandı  */
+}
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+#newsletter input{
+    height: 25px;
+    width: 250px;
+    padding: 4px;
+}
+
+.button_1{
+    height: 40px;
+    background: var(--maincolor);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0 20px;
+}
+
+/*   alt kısma geçtik  */
+
+
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float: left;   /*   box clasındakiler sağa doğru dizildi */
+    width: 30%;      /*  ölüçleri büyük olduğu için düzenledik yoksa sağa doğru dizilmiyordu container dışına çıkmamak için */
+    padding: 10px;   /*   yazılar ortalansın */
+    text-align: center;   /*   yazılar ortalansın */
+}
+#boxes .box img{
+    width: 90px;
+}
+
+/*   footer son alt kısım */
+
+footer{
+    background-color: var(--maincolor);
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*   about html sayfasına özellik atama */
+
+.dark{
+    background: var(--background);
+    padding: 15px;
+    color: #fff;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+/*   margin: 10px 0 yazmamız yeterli olurdu bu 2 margin yerine */
+
+}
+
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+
+}
+
+article#main-col{
+    float: left;
+    width: 60%;
+}
+
+aside#sidebar .quote input , aside#sidebar .quote textarea{
+    width: 90%;
+    padding: 5px;
+}
+
+ul#services li{
+    background-color: #E6E6E6;
+    border: #ccc solid 1px;
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 768px){
+    header #brandding,
+    header nav,
+    header nav li,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar{
+        text-align: center;
+        width:100%;
+        float: none;
+
+    }
+
+
+}
+
+
